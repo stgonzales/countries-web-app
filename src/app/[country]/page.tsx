@@ -30,7 +30,7 @@ export default async function Country({ params }: { params: { country: string } 
             Back
           </Link>
           <div className='mx-auto max-w-xs md:max-w-7xl md:w-full md:h-full flex flex-col gap-11 items-center lg:justify-between lg:flex-row lg:items-center mb-[60px] md:mb-0'>
-          <Image src={countryDetails.flags.svg} alt={countryDetails.flags.alt} width={320} height={230} className='rounded-lg md:w-full lg:max-w-[560px] aspect-auto'/>
+          <Image src={countryDetails.flags.svg} alt={countryDetails.flags.alt || `${nativeName} flag`} width={320} height={230} className='rounded-lg md:w-full lg:max-w-[560px] aspect-auto'/>
           <div className='w-full flex flex-col gap-[68px] lg:max-w-[574px]'>
             <div className='w-full flex flex-col gap-4 md:gap-6'>
               <div>

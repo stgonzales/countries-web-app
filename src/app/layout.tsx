@@ -1,6 +1,6 @@
+import { Nunito_Sans } from 'next/font/google'
 import { Header } from '@/components'
 import './globals.css'
-import { Nunito_Sans } from 'next/font/google'
 
 const nunitoSans = Nunito_Sans({ subsets: ['latin'] })
 
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='dark'>
+    <html lang="en" suppressHydrationWarning={true} >
       <body className={`${nunitoSans.className} bg-light-gray dark:bg-dark-blue-200 text-dark-blue-300 dark:text-white`}>
         <Header />
         {children}

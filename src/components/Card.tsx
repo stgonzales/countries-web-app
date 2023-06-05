@@ -7,7 +7,7 @@ export default function Card(props: Country) {
     <Link href={`${props.name.common}`}>
       <div className="min-w-[264px] min-h-[336px] shadow rounded-md bg-white dark:bg-dark-blue-100">
         <div className="relative rounded-t-lg overflow-hidden mb-6">
-          <Image src={props.flags.png} alt={props.flags.alt} width={320} height={230} className="aspect-video"/>
+          <Image src={props.flags.png} alt={props.flags.alt || `${props.name.common} flag`} width={320} height={230} className="aspect-video"/>
         </div>
         <div className="pl-6 pb-[46px]">
         <h2 className="text-lg font-extrabold mb-4">{props.name.common}</h2>
